@@ -11,7 +11,7 @@ public	class	SlotDef	{
     public	float						
         y;
     public	bool		
-        faceUp=false;
+        faceUP=false;
     public	string			
         layerName="Default";
     public	int						
