@@ -32,14 +32,15 @@ public	class	SlotDef	{
     public	int					
         player;
     //	player	number	of	a	hand		
-    public	Vector3					
+    public	Vector3
         pos;
     //	pos	derived	from	x, y,	&	multiplier
 }
 
 public	class	BartokLayout	:	MonoBehaviour	{
 
-    public PT_XMLReader xmlr;       //	Just	like	Deck,	this	has	an PT_XMLReader		
+    public PT_XMLReader 
+        xmlr;       //	Just	like	Deck,	this	has	an PT_XMLReader		
     public	PT_XMLHashtable			
         xml;            //	This	variable	is	for	faster	xml access			
     public	Vector2										
@@ -57,13 +58,13 @@ public	class	BartokLayout	:	MonoBehaviour	{
 
     //	This	function	is	called	to	read	in	the	LayoutXML.xml	file		
     public	void	ReadLayout(string	xmlText)	{
-        xmlr	=	new	PT_XMLReader();
+        xmlr =	new	PT_XMLReader();
         xmlr.Parse(xmlText);                        //	The	XML	is	parsed		
-        xml	=	xmlr.xml["xml"][0]; //	And	xml	is	set	as	a	shortcut	to	the XML		
+        xml	= xmlr.xml["xml"][0]; //	And	xml	is	set	as	a	shortcut	to	the XML		
                                     
         //	Read	in	the	multiplier,	which	sets	card	spacing					
-        multiplier.x	=	float.Parse(xml["multiplier"][0].att("x"));
-        multiplier.y	=	float.Parse(xml["multiplier"][0].att("y"));
+        multiplier.x = float.Parse(xml["multiplier"][0].att("x"));
+        multiplier.y = float.Parse(xml["multiplier"][0].att("y"));
         //	Read	in	the	slots			
         SlotDef	tSD;
         //	slotsX	is	used	as	a	shortcut	to	all	the	<slot>s			
